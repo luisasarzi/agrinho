@@ -6,3 +6,21 @@ padding: 0 1rem 3rem;
 color: #2e7d32;
 
 }
+
+header {
+    text-align: center;
+    margin: 2rem 0 3rem;
+
+}
+
+header h1{
+    font-size: 2.8rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 1px 1px 3px #a0cfa0
+}
+
+
+header p {
+font-size: 1.3rem;
+font-weight: 500;
+}
