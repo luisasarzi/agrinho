@@ -25,3 +25,30 @@ buttons.forEach(button => {
     addPlant(type);
   });
 });
+function addPlant(type) {
+  const data = plantData[type];
+  if (!data) {
+    mensagem.textContent = `Erro: tipo ${type} não encontrado.`;
+    return;
+  }
+
+  const plant = document.createElement('div');
+  plant.classList.add('plant', 'growth-1');
+  plant.textContent = data.emoji;
+
+  if (!jardim) {
+    console.error("Elemento com id 'Jardim' não encontrado!");
+    return;
+  }
+
+  const maxX = jardim.clientWidth - 60;
+  const maxY = jardim.clientHeight - 60;
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  plant.style.left = `${x}px`;
+  plant.style.top = `${y}px`;
+
+  jardim.appendChild(plant);
+  mensagem.textContent = data.description;
+}
