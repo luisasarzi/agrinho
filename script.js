@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('#botoes button');
 const jardim = document.getElementById('Jardim');
 const mensagem = document.getElementById('mensagem');
+
 const plantData = {
   Árvore: {
     emoji: '🌳',
@@ -19,12 +20,14 @@ const plantData = {
     description: 'Animal que ajuda na agricultura e alimentação.',
   }
 };
+
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     const type = button.getAttribute('data-type');
     addPlant(type);
   });
 });
+
 function addPlant(type) {
   const data = plantData[type];
   if (!data) {
@@ -49,18 +52,18 @@ function addPlant(type) {
   plant.style.left = `${x}px`;
   plant.style.top = `${y}px`;
 
+  let growthStage = 1;
+
+  plant.addEventListener('click', () => {
+    if (growthStage < 3) {
+      growthStage++;
+      plant.className = `plant growth-${growthStage}`;
+      mensagem.textContent = `O ${data.emoji} cresceu!`;
+    } else {
+      mensagem.textContent = `O ${data.emoji} já está totalmente crescido!`;
+    }
+  });
+
   jardim.appendChild(plant);
   mensagem.textContent = data.description;
 }
-
-let growthStage = 1;
-
-plant.addEventListener('click', () => {
-  if (growthStage < 3) {
-    growthStage++;
-    plant.className = `plant growth-${growthStage}`;
-    mensagem.textContent = `O ${data.emoji} cresceu!`;
-  } else {
-    mensagem.textContent = `O ${data.emoji} já está totalmente crescido!`;
-  }
-});

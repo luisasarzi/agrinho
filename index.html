@@ -2,24 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conexão entre o Campo e a Cidade</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Festejando a Conexão entre o Campo e a Cidade</h1>
         <p>Descubra como o campo sustenta, alimenta e cuida da vida na cidade.</p>
     </header>
 
-    <main>
-        <section>
-            <h2>Árvores</h2>
-            <p>As árvores purificam o ar e oferecem sombra nas cidades.</p>
-        </section>
-
-        <section>
-            <h2>Colheita</h2>
-            <p>O campo traz alimentos frescos para a cidade.</p>
-        </section>
 <main>
 <section id="arvores" class="informacoes-section">
     <h2>Árvores</h2>
@@ -44,19 +37,31 @@
     <p>Os animais ajudam na agricultura e produzem alimentos como leite e carne, fundamentais para a alimentação e economia da cidade.</p>
     <div class="emoji">🐮</div>
 </section>
-<section>
-    <h2>Jardim Virtual</h2>
-    <p>Agora que você conhece cada elemento, plante o seu jardim!</p>
+
+<section id="Jogo" class="jogo-section">
+<h2>Jardim Virtual</h2>
+    <p>Agora que você conhece a importância de cada elemento, divirta-se plantando e fazendo crescer seu próprio jardim!</p>
 
     <div id="botoes">
-        <button>Plantar Árvore 🌳</button>
-        <button>Plantar Trigo 🌾</button>
-        <button>Adicionar Rio 💧</button>
-        <button>Adicionar Animal 🐄</button>
+        <button data-type="Árvore"> Plantar Árvore 🌳</button>
+        <button data-type="Colheita"> Plantar Trigo🌾 </button>
+        <button data-type="Rio"> Adicionar Rio 💧 </button>
+        <button data-type="animais">Adicionar Animal 🐄</button>
     </div>
 
     <div id="Jardim"></div>
+
+    <div class="mensagem" id="mensagem"></div>
 </section>
-<link rel="stylesheet" href="style.css">
+
+</main>
+
 <script src="script.js"></script>
+    
+</body>
+</html>
+
+
+
+
 
