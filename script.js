@@ -52,3 +52,15 @@ function addPlant(type) {
   jardim.appendChild(plant);
   mensagem.textContent = data.description;
 }
+
+let growthStage = 1;
+
+plant.addEventListener('click', () => {
+  if (growthStage < 3) {
+    growthStage++;
+    plant.className = `plant growth-${growthStage}`;
+    mensagem.textContent = `O ${data.emoji} cresceu!`;
+  } else {
+    mensagem.textContent = `O ${data.emoji} já está totalmente crescido!`;
+  }
+});
