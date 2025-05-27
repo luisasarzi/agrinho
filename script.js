@@ -19,3 +19,9 @@ const plantData = {
     description: 'Animal que ajuda na agricultura e alimentação.',
   }
 };
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const type = button.getAttribute('data-type');
+    addPlant(type);
+  });
+});
