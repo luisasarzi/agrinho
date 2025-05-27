@@ -63,3 +63,92 @@ main {
     flex-basis: 60px;
     user-select: none;
 }
+
+.jogo-section {
+
+    background: #c8e6c9;
+    border: 3px solid #388e3c;
+    border-radius: 20px;
+    padding: 2rem 2rem 3rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+}
+
+.jogo-section p {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+  text-shadow: 1px 1px 3px #76c776;
+}
+
+button {
+
+     background-color: #4caf50;
+     color: white;
+     border: none;
+     padding: 0.75rem 1.4rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 10px rgba(76,175,80,0.4);
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+#Jardim {
+      background: #e3f5e3;
+  border: 2px solid #66bb6a;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 720px;
+  height: 380px;
+  margin: 0 auto 1.3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+
+}
+
+
+.plant {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.5s ease;
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.growth-1 { transform: scale(1); }
+.growth-2 { transform: scale(1.4); }
+.growth-3 { transform: scale(1.8); }
+
+.mensagem {
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #2e7d32;
+  text-align: center;
+  min-height: 50px;
+  user-select: none;
+}
+
+.informacoes-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.informacoes-section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background-color: #c6efc6;
+}
