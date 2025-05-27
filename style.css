@@ -24,3 +24,9 @@ header p {
 font-size: 1.3rem;
 font-weight: 500;
 }
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+
+}
